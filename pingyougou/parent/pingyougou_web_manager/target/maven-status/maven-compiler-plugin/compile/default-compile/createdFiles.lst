@@ -1,0 +1,10 @@
+cn/itcast/core/controller/goods/GoodsController.class
+cn/itcast/core/controller/content/ContentController.class
+cn/itcast/core/controller/brand/BrandConterller.class
+cn/itcast/core/controller/typeTemplate/TypeTemplateController.class
+cn/itcast/core/controller/itemCat/ItemCatController.class
+cn/itcast/core/controller/login/LoginController.class
+cn/itcast/core/controller/content/ContentCategoryController.class
+cn/itcast/core/controller/upload/UploadController.class
+cn/itcast/core/controller/specification/SpecificationController.class
+cn/itcast/core/controller/seller/SellerController.class

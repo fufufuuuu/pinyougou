@@ -1,0 +1,5 @@
+cn/itcast/core/controller/goods/GoodsController.class
+cn/itcast/core/controller/upload/UploadController.class
+cn/itcast/core/controller/itemCat/ItemCatController.class
+cn/itcast/core/service/userDetail/UserDetailServiceImpl.class
+cn/itcast/core/controller/typeTemp/TypeTemplateController.class

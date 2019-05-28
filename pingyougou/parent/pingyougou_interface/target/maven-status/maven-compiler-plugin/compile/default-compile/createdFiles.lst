@@ -1,0 +1,12 @@
+cn/itcast/core/service/itemcat/ItemCatService.class
+cn/itcast/core/service/user/UserService.class
+cn/itcast/core/service/brand/BrandService.class
+cn/itcast/core/service/content/ContentService.class
+cn/itcast/core/service/seller/SellerService.class
+cn/itcast/core/service/cart/CartService.class
+cn/itcast/core/service/search/ItemSearchService.class
+cn/itcast/core/service/staticPage/StaticPageService.class
+cn/itcast/core/service/specification/SpecificationService.class
+cn/itcast/core/service/typeTemplate/TypeTemplateService.class
+cn/itcast/core/service/content/ContentCategoryService.class
+cn/itcast/core/service/goods/GoodsService.class

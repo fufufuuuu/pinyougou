@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--suppress ALL -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:solr="http://www.springframework.org/schema/data/solr"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/data/solr http://www.springframework.org/schema/data/solr/spring-solr.xsd">
+        <!--配置solr服务器地址-->
+    <!--<solr:solr-server id="solrServer" url="http://10.211.200.3:8080/solr"/>-->
+    <!-- 集群版solr -->
+    <bean id="cloudSolrServer" class="org.apache.solr.client.solrj.impl.CloudSolrServer">
+        <constructor-arg name="zkHost" value="120.79.77.221:2181,120.79.77.221:2182,120.79.77.221:2183"/>
+        <property name="defaultCollection" value="collection1"/>
+    </bean>
+        <!--solr模版配置-->
+    <bean id="solrTemplate" class="org.springframework.data.solr.core.SolrTemplate">
+        <constructor-arg ref="cloudSolrServer"/>
+    </bean>
+</beans>

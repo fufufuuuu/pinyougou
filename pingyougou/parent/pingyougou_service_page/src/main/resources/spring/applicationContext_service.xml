@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+
+        http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!--spring整合dubbox-->
+    <!--配置应用名称-->
+    <dubbo:application name="pingyougou_service_page"/>
+    <!--配置注册中心-->
+    <dubbo:registry protocol="zookeeper" address="120.79.77.221:2181,120.79.77.221:2182,120.79.77.221:2183"/>
+    <!--配置dubbo协议-->
+    <dubbo:protocol name="dubbo" port="10088"/>
+    <!--配置扫描器-->
+    <dubbo:annotation package="cn.itcast.core.service"/>
+
+</beans>

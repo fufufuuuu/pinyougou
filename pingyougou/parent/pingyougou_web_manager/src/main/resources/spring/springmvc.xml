@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--suppress ALL -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--加载配置文件-->
+    <context:property-placeholder location="classpath:properties/application.properties"/>
+    <!--spring整合dubbo-->
+    <mvc:annotation-driven>
+
+        <mvc:message-converters>
+            <bean class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">
+                <property name="supportedMediaTypes" value="application/json"/>
+                <property name="features">
+                    <array>
+                        <value>WriteMapNullValue</value>
+                        <value>WriteDateUseDateFormat</value>
+                    </array>
+                </property>
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+    <!--文件上传解析器-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="UTF-8"/>
+        <property name="maxInMemorySize" value="5242880"/>
+    </bean>
+    <!--配置应用名称-->
+    <dubbo:application name="pingyougou_web_manager"/>
+    <!--配置注册中心-->
+    <dubbo:registry protocol="zookeeper" address="120.79.77.221:2181,120.79.77.221:2182,120.79.77.221:2183"/>
+    <!--配置扫描器-->
+    <dubbo:annotation package="cn.itcast.core.controller"/>
+    <!--设置全局超时时间-->
+    <dubbo:consumer timeout="50000"/>
+
+    <mvc:default-servlet-handler/>
+</beans>

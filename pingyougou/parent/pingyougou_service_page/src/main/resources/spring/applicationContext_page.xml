@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--管理bean-->
+    <bean id="freeMarkerConfigurer" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+        <!--指定模版位置-->
+        <property name="templateLoaderPath" value="/WEB-INF/ftl"/>
+        <!--指定编码格式-->
+        <property name="defaultEncoding" value="UTF-8"/>
+    </bean>
+    <bean id="staticPageServiceIMpl" class="cn.itcast.core.service.StaticPage.StaticPageServiceIMpl">
+        <property name="freeMarkerConfigurer" ref="freeMarkerConfigurer"/>
+    </bean>
+</beans>

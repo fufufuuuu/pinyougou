@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="baidu-sms" />
+        <module name="pingyougou_common" />
+        <module name="pingyougou_dao" />
+        <module name="pingyougou_interface" />
+        <module name="pingyougou_pojo" />
+        <module name="pingyougou_service_buyer" />
+        <module name="pingyougou_service_page" />
+        <module name="pingyougou_service_search" />
+        <module name="pingyougou_service_sellergoods" />
+        <module name="pingyougou_service_user" />
+        <module name="pingyougou_web_manager" />
+        <module name="pingyougou_web_portal" />
+        <module name="pingyougou_web_shop" />
+        <module name="pingyougou_web_user" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
